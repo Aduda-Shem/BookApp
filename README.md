@@ -10,6 +10,9 @@ This is a full-stack application with a frontend built with React and a backend 
 
 - Docker (https://www.docker.com/)
 
+##
+
+![alt text](<Screenshot from 2024-06-10 01-47-13.png>) ![alt text](<Screenshot from 2024-06-10 01-46-42.png>) ![alt text](<Screenshot from 2024-06-10 01-46-31.png>)
 ## Running the Application
 
 To run both the backend and frontend using Docker, follow these steps:
@@ -61,4 +64,3 @@ To stop the containers, you can use:
 docker compose down
 
 
-![alt text](<Screenshot from 2024-06-10 01-47-13.png>) ![alt text](<Screenshot from 2024-06-10 01-46-42.png>) ![alt text](<Screenshot from 2024-06-10 01-46-31.png>)
