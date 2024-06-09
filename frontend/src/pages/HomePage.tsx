@@ -5,27 +5,29 @@ import { Book } from '../types';
 import LoadingSpinner from '../components/LoadingSpinner';
 import BookList from '../components/BookList';
 
-// interface SearchOption {
-//   title: string;
-//   coverPhotoURL: string;
-// }
 
 const HomePage: React.FC = () => {
+  // Custom hook to fetch books data
   const { loading, error, books } = useBooks();
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedSearchTerm, setSelectedSearchTerm] = useState<string | null>(null);
   const [addedBooks, setAddedBooks] = useState<Book[]>([]);
   const [page, setPage] = useState(1);
-  const booksPerPage = 8;
+  
+  // Number of books to display per page
+  const booksPerPage = 8; 
 
+  // Function to handle adding a book to the reading list
   const handleAddBook = (book: Book) => {
     setAddedBooks([...addedBooks, book]);
   };
 
+  // Function to handle removing a book from the reading list
   const handleRemoveBook = (book: Book) => {
     setAddedBooks(addedBooks.filter((b) => b.title !== book.title));
   };
 
+  // Memoized function to filter books
   const filteredBooks = useMemo(() => {
     if (!selectedSearchTerm) return books;
     return books.filter((book: Book) =>
@@ -33,10 +35,12 @@ const HomePage: React.FC = () => {
     );
   }, [books, selectedSearchTerm]);
 
+  // Memoized function to create search options
   const searchOptions = useMemo(() => {
     return books.map(book => ({ title: book.title, coverPhotoURL: book.coverPhotoURL }));
   }, [books]);
 
+  // Function to handle page change in pagination
   const handleChangePage = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
   };
@@ -48,6 +52,7 @@ const HomePage: React.FC = () => {
 
   return (
     <Container sx={{ fontFamily: 'Mulish, sans-serif' }}>
+      {/* Search bar with autocomplete functionality */}
       <Box my={2} sx={{ background: 'linear-gradient(to right, #FF6B6B, #FFD93D)', borderRadius: '20px', padding: '1rem' }}>
         <Autocomplete
           freeSolo
@@ -90,16 +95,20 @@ const HomePage: React.FC = () => {
           )}
         />
       </Box>
+      {/* Loading spinner or error message */}
       {loading ? (
         <LoadingSpinner />
       ) : error ? (
         <Alert severity="error" sx={{ fontFamily: 'Mulish, sans-serif' }}>Error loading books</Alert>
       ) : (
         <>
+          {/* Title for the book list */}
           <Typography variant="h4" align="center" sx={{ marginTop: '2rem', color: '#5ACCCC', fontFamily: 'Mulish, sans-serif' }}>
             Reads
           </Typography>
+          {/* Book list component */}
           <BookList books={displayedBooks} onAdd={handleAddBook} onRemove={handleRemoveBook} addedBooks={addedBooks} />
+          {/* Pagination control */}
           <Box my={4} display="flex" justifyContent="center">
             <Pagination
               count={Math.ceil(filteredBooks.length / booksPerPage)}
@@ -109,9 +118,11 @@ const HomePage: React.FC = () => {
               sx={{ button: { fontFamily: 'Mulish, sans-serif' } }}
             />
           </Box>
+          {/* Title for the reading list */}
           <Typography variant="h4" align="center" sx={{ marginTop: '2rem', color: '#5ACCCC', fontFamily: 'Mulish, sans-serif' }}>
             My Reading List
           </Typography>
+          {/* Display message if the reading list is empty or render the reading list */}
           {addedBooks.length === 0 ? (
             <Typography align="center" sx={{ color: '#335C6E', fontFamily: 'Mulish, sans-serif' }}>
               Your reading list is empty.

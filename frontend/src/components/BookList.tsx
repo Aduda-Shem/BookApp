@@ -13,6 +13,7 @@ interface BookListProps {
 const BookList: React.FC<BookListProps> = ({ books, onAdd, onRemove, addedBooks }) => {
   return (
     <Grid container spacing={3}>
+      {/* Map over the books array to render each book */}
       {books.map((book) => (
         <Grid item key={book.title} xs={12} sm={6} md={4} lg={3}>
           <BookCard

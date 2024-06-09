@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
+// These are the themes to be used on the frontend app
 const theme = createTheme({
   palette: {
     primary: {

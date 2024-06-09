@@ -12,12 +12,14 @@ interface BookCardProps {
 const BookCard: React.FC<BookCardProps> = ({ book, onAdd, onRemove, isBookAdded }) => {
   return (
     <Card sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+      {/* Displays the cover image of the book */}
       <CardMedia
         component="img"
         height="140"
         image={`/${book.coverPhotoURL}`}
         alt={book.title}
       />
+      {/* Displays the title and author of the book */}
       <CardContent>
         <Typography variant="h5" component="h2">
           {book.title}
@@ -26,6 +28,7 @@ const BookCard: React.FC<BookCardProps> = ({ book, onAdd, onRemove, isBookAdded 
           {book.author}
         </Typography>
       </CardContent>
+      {/* Button to add or remove the book from the reading list */}
       <Box sx={{ mt: 'auto' }}>
         <Button
           variant={isBookAdded ? "contained" : "outlined"}
@@ -42,4 +45,5 @@ const BookCard: React.FC<BookCardProps> = ({ book, onAdd, onRemove, isBookAdded 
   );
 };
 
+// React.memo prevents unnecessary re-renders if the props don't change.
 export default React.memo(BookCard);
