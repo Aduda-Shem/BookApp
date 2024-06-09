@@ -7,7 +7,7 @@ This is a full-stack application with a frontend built with React and a backend 
 
 book_app/
 │
-├── backend/ # Backend application
+├── backend/ # Backend application                                                                                                                                                                                                                   
 
 │ ├── node_modules/
 │ ├── src/
