@@ -12,7 +12,7 @@ This is a full-stack application with a frontend built with React and a backend 
 
 ##
 
-![alt text](<Screenshot from 2024-06-10 02-31-13.png>) ![alt text](<Screenshot from 2024-06-10 02-30-51.png>) ![alt text](<Screenshot from 2024-06-10 02-30-41.png>) ![alt text](logo.jpg)
+![alt text](logo.jpg) ![alt text](<Screenshot from 2024-06-10 02-30-41.png>) ![alt text](<Screenshot from 2024-06-10 02-31-13.png>) ![alt text](<Screenshot from 2024-06-10 02-30-51.png>) 
 ## Running the Application
 
 To run both the backend and frontend using Docker, follow these steps:
