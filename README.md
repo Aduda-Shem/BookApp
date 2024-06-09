@@ -29,6 +29,7 @@ To run both the backend and frontend using Docker, follow these steps:
     ```bash
     docker compose up --build
     ```
+    Access the site via http://localhost:3000/
 
 This command will build the Docker images and start the containers for both the backend and frontend services. You can view the frontend application at `http://localhost:3000` and the backend application at `http://localhost:4000`.
 
