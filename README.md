@@ -8,12 +8,14 @@ This is a full-stack application with a frontend built with React and a backend 
 book_app/
 │
 ├── backend/ # Backend application
+
 │ ├── node_modules/
 │ ├── src/
 │ ├── package.json
 │ ├── package-lock.json
 │ └── tsconfig.json
 │
+
 ├── frontend/ # Frontend application
 │ ├── node_modules/
 │ ├── public/
