@@ -5,9 +5,7 @@ This is a full-stack application with a frontend built with React and a backend 
 
 ## Project Structure
 
-/home/pwnresist/Pictures/Screenshots/Screenshot from 2024-06-10 01-30-22.png
-
-
+![alt text](<Screenshot from 2024-06-10 01-30-22.png>)
 ## Prerequisites
 
 - Docker (https://www.docker.com/)
@@ -61,3 +59,6 @@ To stop the containers, you can use:
 
 ```bash
 docker compose down
+
+
+![alt text](<Screenshot from 2024-06-10 01-47-13.png>) ![alt text](<Screenshot from 2024-06-10 01-46-42.png>) ![alt text](<Screenshot from 2024-06-10 01-46-31.png>)
