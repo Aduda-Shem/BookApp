@@ -23,32 +23,8 @@ To run both the backend and frontend using Docker, follow these steps:
     cd book_app
     ```
 
-2. Create a `docker-compose.yml` file in the root directory with the following content:
 
-    ```yaml
-    version: '3.8'
-
-    services:
-      backend:
-        build: ./backend
-        ports:
-          - "4000:4000"
-        volumes:
-          - ./backend:/usr/src/app
-        environment:
-          NODE_ENV: development
-
-      frontend:
-        build: ./frontend
-        ports:
-          - "3000:3000"
-        volumes:
-          - ./frontend:/usr/src/app
-        environment:
-          NODE_ENV: development
-    ```
-
-3. Build and start the Docker containers:
+2. Build and start the Docker containers:
 
     ```bash
     docker compose up --build
