@@ -5,7 +5,7 @@ This is a full-stack application with a frontend built with React and a backend 
 
 ## Project Structure
 
-/home/pwnresist/Pictures/Screenshots/Screenshot from 2024-06-10 01-30-22.png
+![Uploading Screenshot from 2024-06-10 01-30-22.png…]()
 
 
 ## Prerequisites
