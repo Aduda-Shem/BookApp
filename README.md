@@ -5,27 +5,7 @@ This is a full-stack application with a frontend built with React and a backend 
 
 ## Project Structure
 
-book_app/
-│
-├── backend/ # Backend application                                                                                                                                                                                                                   
-
-│ ├── node_modules/
-│ ├── src/
-│ ├── package.json
-│ ├── package-lock.json
-│ └── tsconfig.json
-│
-
-├── frontend/ # Frontend application
-│ ├── node_modules/
-│ ├── public/
-│ ├── src/
-│ ├── .gitignore
-│ ├── package.json
-│ ├── package-lock.json
-│ └── tsconfig.json
-│
-└── README.md
+/home/pwnresist/Pictures/Screenshots/Screenshot from 2024-06-10 01-30-22.png
 
 
 ## Prerequisites
