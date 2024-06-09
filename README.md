@@ -1,7 +1,7 @@
 
 # Book App
 
-This is a full-stack application with a frontend built with React and a backend built with Node.js and TypeScript. The frontend can be deployed on Netlify or Vercel, while the backend can be run using Docker.
+This is a full-stack application with a frontend built with React and a backend built with Node.js and TypeScript. 
 
 ## Project Structure
 
