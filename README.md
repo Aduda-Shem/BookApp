@@ -3,9 +3,6 @@
 
 This is a full-stack application with a frontend built with React and a backend built with Node.js and TypeScript. 
 
-## Project Structure
-
-![alt text](<Screenshot from 2024-06-10 01-30-22.png>)
 ## Prerequisites
 
 - Docker (https://www.docker.com/)
